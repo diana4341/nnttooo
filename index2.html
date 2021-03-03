@@ -15,6 +15,7 @@
 		</div>
 		<div class="catalog_bar">
 		    <div class="container">
+			    <!-- href="#" сылка на элемнты с которые имеют токую же сылку на себя. <li> это список которые хранит эти элементы. <ul> это список который хранит второй список и при наведение его выводит.  -->
 		        <ul id="navbar">
                     <li><a href="index.html">Главная</a></li>
 	                <li><a href="#">Книги</a>
@@ -36,12 +37,12 @@
 	        		 <script>
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
-        if (sessionStorage.clickcount) {
-            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
         } else {
-            sessionStorage.clickcount = 1;
+            localStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = "ты нажал на кнопку " + sessionStorage.clickcount + " раз за эту сессию.";
+        document.getElementById("result").innerHTML = "ты нажал на кнопку " + localStorage.clickcount + " раз за эту сессию.";
     } else {
         document.getElementById("result").innerHTML = "извини, браузер не поддерживает хранилище";
     }
@@ -52,7 +53,7 @@ function clickCounter() {
 <p><button onclick="clickCounter()" type="button">нажми тут</button></p>
 <div id="result"></div>
 <p>Кликни, чтобы показание счетчика увеличилось.</p>
-<p>закрой страничку и попробуй снова, счетчик перезагрузиться. чтобы значение не обнулилось вместо local пишем session</p>
+<p>закрой страничку и попробуй снова, счетчик перезагрузиться.</p>
 	        </div>
 		</div>
 	</main>
