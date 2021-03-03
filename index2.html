@@ -36,12 +36,12 @@
 	        		 <script>
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
         } else {
-            localStorage.clickcount = 1;
+            sessionStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = "ты нажал на кнопку " + localStorage.clickcount + " раз за эту сессию.";
+        document.getElementById("result").innerHTML = "ты нажал на кнопку " + sessionStorage.clickcount + " раз за эту сессию.";
     } else {
         document.getElementById("result").innerHTML = "извини, браузер не поддерживает хранилище";
     }
