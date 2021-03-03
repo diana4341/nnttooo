@@ -63,5 +63,13 @@ function clickCounter() {
 	</main>
  </div>	
  </BODY>
+	  <script>
+window.addEventListener('storage', function(e) {  
+   document.querySelector('body').innerHTML = localStorage.getItem(e.key);
+   
+});
+document.querySelector('body').innerHTML = localStorage.getItem('text');
+      
+   </script>
 </HTML>
  
